@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - Internship Registration</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+    
+            nav {
+                background-color: #f1f1f1;
+                padding: 10px;
+            }
+    
+            nav a {
+                margin-right: 15px;
+                text-decoration: none;
+                color: #333;
+            }
+    
+            section {
+                padding: 20px;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+            
+            form {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }
+    
+            label {
+                display: block;
+                margin-bottom: 8px;
+            }
+    
+            input,
+            select {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 16px;
+                box-sizing: border-box;
+            }
+    
+            button {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    
+
+<body>
+
+    <header>
+        <h1>Contact Us - Internship Registration</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="registration.html">Registration</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Contact Information</h2>
+        <p>Feel free to reach out to us for any inquiries or assistance:</p>
+        
+        <ul>
+            <li>Email: abc@example.com</li>
+            <li>Phone: +1 (555) 123-4567</li>
+            <li>Address: 123 Main Street, Cityville, State, Zip Code</li>
+        </ul>
+        
+        <h2>Contact Form</h2>
+        <div id="response-message"></div>
+        <form id="contact-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Internship Registration</p>
+    </footer>
+    <script>
+        function submitForm() {
+            var responseMessage = document.getElementById('response-message');
+            responseMessage.innerHTML = '<p style="color: green;">Response recorded. Thank you!</p>';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+
+</body>
+
+</html>
+

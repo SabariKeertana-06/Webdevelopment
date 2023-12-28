@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: hsl(0, 0%, 20%);
+        }
+
+        section {
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        form {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Internship Registration</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="registration.html">Registration</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section>
+        <h2>Registration Form</h2>
+        <div id="response-message"></div>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="college">College:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="tenth">10th Percentage:</label>
+            <input type="text" id="tenth" name="tenth" required>
+
+            <label for="twelfth">12th Percentage:</label>
+            <input type="text" id="twelfth" name="twelfth" required>
+
+            <label for="domain">Interested Domain:</label>
+            <select id="domain" name="domain" required>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="data">Data Science</option>
+            </select>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <center>
+            <p>&copy; 2023 Internship Registration</p>
+        </center>
+    </footer>
+    <script>
+        function submitForm() {
+            var responseMessage = document.getElementById('response-message');
+            responseMessage.innerHTML = '<p style="color: green;">Response recorded. Thank you!</p>';
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('college').value = '';
+            document.getElementById('tenth').value = '';
+            document.getElementById('twelfth').value = '';
+            document.getElementById('domain').value = '';
+        }
+    </script>
+
+</body>
+
+</html>
